@@ -5,7 +5,7 @@ from discord.ext import commands
 client = commands.Bot(command_prefix=".")
 
 
-@client.event()
+@client.event
 async def on_ready(ctx):
     print('Banana Bot Success!')
 
