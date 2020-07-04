@@ -7,7 +7,7 @@ from discord.ext import commands
 
 start_time = datetime.datetime.now()
 
-guild_id = int(discord.Guild.id)
+guild_id = discord.Guild.id
 
 # prefix = checkserverprefix(guild_id)
 
