@@ -7,9 +7,9 @@ from discord.ext import commands
 
 start_time = datetime.datetime.now()
 
-guild_id = discord.Guild.id
+guild_id = str(discord.Guild.id)
 
-prefix = checkserverprefix(guild_id)
+# prefix = checkserverprefix(guild_id)
 
 
 # Convert uptime to a string.
@@ -34,7 +34,7 @@ client = commands.Bot(command_prefix=".")
 @client.event
 async def on_ready():
     print('Banana Bot Success!')
-    print(f"{prefix}")
+    print(f"{guild_id}")
 
 
 @client.command()
