@@ -10,6 +10,14 @@ mydb = mysql.connector.connect(
 )
 
 
-def checkserverprefix():
+def checkserverprefix(server_id):
     mycursor = mydb.cursor()
+    sql = "SELECT * FROM %s"
+    val = (f"{server_id}",)
+    mycursor.execute(sql, val)
+    results = mycursor.fetchall()
+    for row in results:
+        prefix = row[1]
+    return prefix
+
 
